@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Common styles for all devices */
+nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #070707;
+  color: aqua;
 }
 
-.App-link {
-  color: #61dafb;
+.logo img {
+  height: 40px;
+  width: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+ul li {
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff0883;
+}
+
+/* Responsive Styles */
+
+/* HD TVs and Desktops */
+@media screen and (min-width: 1024px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logo img {
+    height: 60px;
+  }
+
+  ul li {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+}
+
+/* Laptops */
+@media screen and (max-width: 1280px) {
+  nav {
+    padding: 15px;
+    margin-bottom: 9rem;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  ul li {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Smartphones */
+@media screen and (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }
